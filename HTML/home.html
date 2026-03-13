@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoleHeaven</title>
+    <link rel="icon" type="image/x-icon" href="../images/soleheaven_favLogo.png" width="32px">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+      .animate-on-scroll {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease-out, transform 0.8s ease-out;
+}
+
+/* Animated visible state */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+  /* Slider container */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  background-image: url('your-image.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay text positioned at the bottom-left */
+.slider-overlay {
+  position: absolute;
+  bottom: 20px; /* 20px from the bottom */
+  left: 20px; /* 20px from the left */
+  text-align: left; /* Align text to the left */
+  color: white;
+  z-index: 2;
+  opacity: 0;
+  max-width: 90%;
+  padding: 1.5rem;
+  border-radius: 8px; /* Rounded corners */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth fade and slide */
+  transform: translateX(-200px); /* Initially positioned below */
+}
+
+/* Activated when in view */
+.slider-overlay.visible {
+  opacity: 1;
+  transform: translateX(0); /* Final position */
+}
+
+/* Headline and paragraph styles */
+.slider-overlay h2 {
+  color: aliceblue;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.slider-overlay p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Button styling */
+button.explore {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background-color: #191818;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px 15px rgba(239, 96, 96, 0.4);
+}
+button.explore a{
+  color: white;
+}
+
+button.explore:hover {
+  background-color: rgb(237, 144, 38);
+  transform: scale(1.05);
+}
+button.explore:hover a{
+color: #000000;
+}
+
+    img 
+      {
+      width: 100%;
+      height: 100%;
+      }
+      
+      .t1{
+        border:2px solid #f7f4f4;
+        height: 400px;
+        width: 300px;
+        padding: 12px;
+        border-radius:24px;
+      }
+     
+      .video-section {
+  position: relative;
+  width: 100%;
+  height: 600px; /* Adjust height as needed */
+  overflow: hidden;
+  margin-top: 100px;      
+}
+  
+
+.video-section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 10px;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+/* Overlay content container */
+.video-overlay-content {
+  position: relative;
+  top: 40%;
+  left: 23%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  
+  border-radius: 1rem;
+  max-width: 90%;
+}
+
+/* Styling for headings and paragraph */
+.video-overlay-content h2 {
+ 
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.video-overlay-content p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+/* Styling for the button */
+.video-overlay-content button {
+  
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background-color: #191818;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px 15px rgba(239, 96, 96, 0.4);
+}
+.video-overlay-content button a{
+  
+  color:white;
+}
+.video-overlay-content button:hover {
+  transform: scale(1.05);
+  background-color:rgb(237, 144, 38);
+}
+.video-overlay-content button:hover a{
+  color: #000000;
+}
+
+/*required css for items of our speciality animation  */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.scroll-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  transform: translateY(20px);
+}
+
+.slide-up {
+  transform: translateY(40px);
+}
+
+.zoom-in {
+  transform: scale(0.8);
+}
+
+.zoom-in.show {
+  transform: scale(1);
+}
+/*required css for items of our speciality animation ends here */
+
+    </style>
+</head>
+<body>
+  <header>
+        <!--html codes for navbar-->
+    <nav class="navbar">
+      <a href="../HTML/home.html"> <div class="logo-main"><img src="../images/SOLEHEAVEN.png"></div>
+      </a>
+       
+        <ul>
+            <li ><a href="../HTML/home.html"  >Home</a></li>
+            <li><a href="../HTML/product.html">Product</a></li>
+            <li><a href="../HTML/aboutus.html">About Us </a></li>
+            <li><a href="../HTML/blog.html">Blog</a></li>
+            <li><a href="../HTML/research.html">Research Page</a></li>
+        </ul>
+        <!--add to cart and bar icon-->
+      <div class="icon">
+        <div class="cart-container" id="cart-container" style="position: relative;">
+          <i class="fa-solid fa-cart-shopping" id="cart-icon" style="cursor: pointer;"></i>
+          <span id="cart-count">0</span>
+        
+          <!-- Dropdown -->
+          <div class="cart-dropdown" id="cart-dropdown" style="display: none;"> 
+            <div id="cart-items"></div>
+            <div id="cart-total" style="padding: 10px; border-top: 1px solid #ccc; font-weight: bold;">
+              Total: $0.00
+            </div>
+          </div>
+        </div>
+        </div><!--base for js -->
+        <i class="fa-solid fa-bars" style="cursor: pointer;"></i><!--bar icon-->
+        </div>
+      </div>
+    </nav>
+  <!--Html codes for navbar ends here-->
+  </header>
+
+    <!--codes for image slider starts here-->
+    <div id="slider" class="slider">
+      <div class="slider-overlay animate-on-scroll">
+        <h2>Destination For Trendsetters, Athletes and Sneakerheads</h2>
+        <p><b> From premium streetwear kicks to performance-ready trainers, our curated collection features <br>
+          all the brands and style you crave</b></a>
+        </p>
+        <button class="explore"><a href="product.html">Explore Now</a></button>
+      </div>
+    </div>
+    <br><br>
+    
+    <script >//js code for image slider
+
+      // Image slider logic
+  const slider = document.getElementById('slider');
+  const images = [
+    '../images/cover-1.webp',
+    '../images/cover-2.webp',
+    '../images/cover-3.webp',
+    '../images/cover-5.webp'
+  ];
+  let index = 0;
+
+  function changeSlide() {
+    slider.style.backgroundImage = `url('${images[index]}')`;
+    index = (index + 1) % images.length;
+  }
+
+  changeSlide();
+  setInterval(changeSlide, 2000);//js code for image slider ends here
+
+    // Scroll animation logic(animation on scroll for image slider)
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  document.querySelectorAll('.slider-overlay').forEach(el => {
+    observer.observe(el);
+  });
+    </script>
+
+    <h2 style="margin-left: 15cm;">WE PROVIDE WHAT OTHER'S DONT</h2>
+    <br>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const animatedElements = document.querySelectorAll('.scroll-animate');
+    
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          } else {
+            entry.target.classList.remove('show');
+          }
+        });
+      }, {
+        threshold: 0.2,
+      });
+    
+      animatedElements.forEach(el => observer.observe(el));
+    });    
+    //animation on scroll code js for image slider ends here
+    </script>
+
+    <section class="speciality scroll-animate zoom-in">
+      <div class="speciality">
+          <div class="speciality-item">
+           <i class="fa-solid fa-truck-fast"></i>
+            <span>Fast Delivery</span>
+        <br>
+            <p>Our 20 plus stores around Nepal <br>ensures that you get your products as <br>soon as possible and in excellent condition</p>
+        </div>
+          <div class="speciality-item">
+           <i class="fa-solid fa-rotate-left"></i>
+             <span>Easy Returns</span>
+        <br>
+        <p>Our easy return policy makes us<br> one of the most customer-friendly and <br>considerate source to buy products</p>
+      </div>
+          <div class="speciality-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Store Locaton</span>
+             <br>
+              <p>We are located in 15 different districts in <br>Nepal with always in-stock stores.This makes us <br>
+              the most reliable source across Nepal.</p>
+          </div>
+      </div>
+</section>
+<br><br>
+<span class="line"></span>  
+    <br><br>
+
+    <!--Codes to display items in sales on home page-->
+    <!-- In Sale Section -->
+<section class="product-section">
+  <h2 class="pd">In Sale For You</h2>
+  <div class="product-grid">
+     <!-- Product 1 -->
+     <div class="product-card">
+      <a href="../HTML/productdetail.html"><div class="product-image">
+        <img src="../images/IMG_20250430_153107.png" alt="Teck-02 Goldstar"></a>
+                <span class="sale-badge">SALE</span>
+      </div>
+      <div class="product-details">
+        <h3>Nike Air Jordan</h3>
+        <p class="price">Rs. 6750 <span style="color: rgba(60, 60, 59, 0.533);margin-left: 6px;">-30%</span></p>
+        <button class="add-to-cart-btn" onclick="addToCart('Teck-01 Goldstar', 3599.10)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://www.goldstarshoes.com/Media/New%20Folder_25/New%20Folder_2/107a0407.jpg" alt="Teck-01 Goldstar">
+        <span class="sale-badge">SALE</span>
+      </div>
+      <div class="product-details">
+        <h3>Low Canvas</h3>
+        <p class="price">Rs. 3599.10 <span style="color: rgba(60, 60, 59, 0.533);margin-left: 6px;">-25%</span></p>
+        <button class="add-to-cart-btn" onclick="addToCart('Low Canvas', 3599.10)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://www.goldstarshoes.com/Media/New%20Folder_25/New%20Folder_26/24f04203_d-beige_4.jpg" alt="Teck-06 Casual Shoe">
+        <span class="sale-badge">SALE</span>
+      </div>
+      <div class="product-details">
+        <h3>Teck-06 Casual Shoe</h3>
+        <p class="price">Rs. 3699.10 <span style="color: rgba(60, 60, 59, 0.533);margin-left: 6px;">-10%</span></p>
+        <button class="add-to-cart-btn" onclick="addToCart('Teck-06 Casual Shoe', 3699.10)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://www.goldstarshoes.com/Media/g2204grey-1.jpg" alt="G10 G2204 Goldstar">
+        <span class="sale-badge">SALE</span>
+      </div>
+      <div class="product-details">
+        <h3>G10 G2204 Goldstar</h3>
+        <p class="price">Rs. 2547.00 <span style="color: rgba(60, 60, 59, 0.533);margin-left: 6px;">-35%</span></p>
+        <button class="add-to-cart-btn" onclick="addToCart('G10 G2204 Goldstar',2547.00)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br><br><br><br>
+<span class="line"></span>
+<br> <br><br><br>
+<!-- New Arrivals Section -->
+<section class="product-section">
+  <h2 class="pd">New Arrivals</h2>
+  <div class="product-grid">
+    <!-- Product 5 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://www.goldstarshoes.com/Media/goldstar_shoes_collection.jpg" alt="ACE 3">
+        <span class="New-badge">NEW</span>
+      </div>
+      <div class="product-details">
+        <h3>ACE 3</h3>
+        <p class="price">Rs. 2920.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart('ACE 3',2920.00)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://www.goldstarshoes.com/Media/grey-1.jpg" alt="Sunlite 04">
+        <span class="New-badge">NEW</span>
+      </div>
+      <div class="product-details">
+        <h3>Sunlite 04</h3>
+        <p class="price">Rs. 1070.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart('Sunlite 04',1070.00)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://www.goldstarshoes.com/Media/2_16.png" alt="Low-Top Trainers">
+        <span class="New-badge">NEW</span>
+      </div>
+      <div class="product-details">
+        <h3>Low-Top Trainers</h3>
+        <p class="price">Rs. 1089.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart('Low-Trainers',1089.00)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://www.goldstarshoes.com/MediaThumb/original/Media/NEW%20PRODUCTS/New%20Folder/9-1.jpg" alt="Rock 06 Goldstar">
+        <span class="New-badge">NEW</span>
+      </div>
+      <div class="product-details">
+        <h3>Rock 06 Goldstar</h3>
+        <p class="price">Rs. 3049.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart('Rock 06 Goldstar',3049.00)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br><br>
+<span class="line"></span>
+
+    <br><!-- section for video used in home page -->
+      <div class="video-section">
+        <video autoplay muted loop playsinline>
+          <source src="../images/covervdohome.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay-content">
+          <br><br><br>
+          <h2 class="animate-on-scroll" style="margin-right:0.48cm;">Difficulty in finding your perfect pairs ?</h2>
+          
+          <p class="animate-on-scroll"  style="text-align: left;margin-left:  9.5cm;;">Our always in stock attribute will always<br> fulfill your desires and grant you<br> what is yours. Choose Premium, 
+            Choose affordable, Choose what suits you.
+            <br><br><br>
+          <h2 class="animate-on-scroll" style="text-align: left;margin-left: 9.5cm;">Don't waste your time</h2>
+          <p class="animate-on-scroll" style="margin-right: 10cm;">Find your perfect pair today</p>
+          <button class="animate-on-scroll" style="margin-right: 13cm;"><a href="product.html">Shop Now</a></button>
+        </div>
+      </div><!--video section ends here-->
+      <br>
+      <span class="line"></span>
+      <br><br>
+      
+
+      <h2 class="animate-on-scroll" style="margin-left: 17cm;">IN WITH THE NEW</h2><br>
+      <p class="animate-on-scroll"  style="margin-left: 11cm;">never ending collection of shoes with size available for all. Matching the vibe of all age brackets. </p>
+      <br><br>
+      <h2 class="animate-on-scroll"  style="margin-left: 15cm;">CHOOSE YOUR CATEGORIES</h2>
+      
+      <br>
+      <span class="line"></span>
+      <br><br>
+      <div class="what-we-have">
+        <div class="first">
+          <h3 style="margin-left: 2cm;color: white;background-color: #000000;margin-right: 2cm;margin-bottom: 0.1cm; text-align: center;">Designer sneakers</h3>
+          <img src="../images/designer sneakers.webp" alt="designer skeakers" >
+          
+        </div>
+        <div class="second">
+          <h3 style="margin-left: 2cm;color: white;background-color: #000000;margin-right: 2cm;margin-bottom: 0.1cm; text-align: center;">Retro classics</h3>
+          <img src="../images/retroclassic.webp" alt="retro classics">
+        </div>
+        <div class="third">
+          <h3 style="margin-left: 2cm;color: white;background-color: #000000;margin-right: 2cm;margin-bottom: 0.1cm; text-align: center;">Y2K Inspired</h3>
+          <img src="../images/y2k inspired.jpeg" alt="y2k inspired">
+        </div>
+        <div class="forth">
+          <h3 style="margin-left: 2cm;color: white;background-color: #000000;margin-right: 2cm;margin-bottom: 0.1cm; text-align: center;">Daily exercise</h3>
+          <img src="../images/exercise shoes.webp" alt="exercise shoes">
+        </div>
+      </div><br>
+      <div class="final-button">
+        <button class="visit"><a href="../HTML/product.html">Visit</a></button>
+      </div>
+      <br><br><br>
+      <span class="line"></span>
+      <br><br><br>
+      <h1 class="animate-on-scroll" style="margin-left: 14cm;"><i>Better Sole For Better Soul</i></h1><br>
+      <h3 class="animate-on-scroll" style="margin-left: 16.7cm;">Heaven For Sneakers</h3>
+      <br><br>
+    <!--footer section-->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <div class="logo-main">
+            <img src="../images/SOLEHEAVEN.png" alt="logo" />
+          </div>
+          <p class="footer-description">
+            Your one-stop shop for trendy, comfortable, and affordable sneakers.
+            We bring you the best footwear from around the world.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../HTML/home.html">Home</a></li>
+            <li><a href="../HTML/product.html">Products</a></li>
+            <li><a href="../HTML/aboutus.html">About Us</a></li>
+            <li><a href="../HTML/blog.html">Blog</a></li>
+            <li><a href="../HTML/research.html">Research</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <ul class="footer-contact contact-main">
+            <li><i class="fas fa-envelope"></i> support@soleheaven.com</li>
+            <li><i class="fas fa-phone"></i> +977-9834567281</li>
+            <li><i class="fas fa-map-marker-alt"></i> Dulari, Nepal</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Available Brands</h4>
+          <ul class="footer-brands">
+            <li>Goldstar</li>
+            <li>Adidas</li>
+            <li>Nike</li>
+            <li>Puma</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="copyright">&copy; 2025 Sole Heaven. All rights reserved.</p>
+      </div>
+    </footer>
+      <!--js for animation on scroll of contents overlaid on video-->
+      <script>
+      document.addEventListener('DOMContentLoaded', () => {
+  const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');    // Animate in when visible
+      } else {
+        entry.target.classList.remove('visible'); 
+      }
+    });
+  }, {
+    threshold: 0.1 // Trigger when 10% visible
+  });
+
+  animatedElements.forEach(el => observer.observe(el));
+});
+      </script>
+    
+   
+      
+      
+      <script src="../JS/home.js"></script>
+</body>
+
+</html>

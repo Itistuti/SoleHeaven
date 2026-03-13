@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../images/soleheaven_favLogo.png" width="32px">
+    <title>Sole Heaven | About Us</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap">
+    <link rel="stylesheet" href="../CSS/aboutus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+      <!--html codes for navbar-->
+      <nav class="navbar">
+        <div class="logo">
+          <a href="../HTML/home.html">
+            <div class="logo-main">
+              <img src="../images/SOLEHEAVEN.png" alt="logo" />
+            </div>
+          </a>
+        </div>
+        <ul>
+          <li><a href="../HTML/home.html">Home</a></li>
+          <li><a href="../HTML/product.html">Product</a></li>
+          <li><a href="../HTML/aboutus.html">About Us </a></li>
+          <li><a href="../HTML/blog.html">Blog</a></li>
+          <li><a href="../HTML/research.html">Research Page</a></li>
+        </ul>
+        <!--add to cart and bar icon-->
+        <div class="icon">
+          <div
+            class="cart-container"
+            id="cart-container"
+            style="position: relative"
+          >
+          <a href="../HTML/home.html"><i
+            class="fa-solid fa-cart-shopping"
+            id="cart-icon"
+            style="cursor: pointer"
+          ></i></a>
+            
+            
+
+            <!-- Dropdown -->
+            <div class="cart-dropdown" id="cart-dropdown" style="display: none">
+              <div id="cart-items"></div>
+              <div
+                id="cart-total"
+                style="
+                  padding: 10px;
+                  border-top: 1px solid #ccc;
+                  font-weight: bold;
+                "
+              >
+                Total: $0.00
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--base for js -->
+        <div><i class="fa-solid fa-bars" style="cursor: pointer"></i
+          ></div>
+        
+      </nav>
+      <!--Html codes for navbar ends here-->
+    </header>
+    <main class="main-wrapper">
+        <div class="vid" aria-label="Brand Video">
+            <video autoplay muted loop width="100%" height="400px">
+                <source src="../images/shoes.mp4">
+            </video>
+        </div>
+        <header class="heading">
+            <h1>About Us</h1>
+        </header>
+        <section class="sec about-section" aria-label="About Sole Heaven">
+            <div class="content">
+                <article class="main">
+                    <h2>Welcome to Sole Heaven</h2>
+                    <p>
+                        At <b>Sole Heaven</b>, we believe in <b>better soles for better souls</b>. Our mission is to empower your every step with confidence and comfort. Since our humble beginnings in the era of Facebook and online marketing, your trust has helped us grow into a beloved brand. We use only premium materials for long-lasting, stylish footwear that keeps you moving forward—on any terrain. Our collections blend comfort, durability, and the latest trends, so you never have to choose between style and substance. Thank you for being part of our journey. Step into something new with Sole Heaven—where every walk is a celebration.
+                    </p>
+                </article>
+                <aside class="image" aria-label="Sneaker Carousel">
+                    <div class="carousel">
+                        <div class="slides">
+                            <img src="../images/Shoe2-min.jpg" alt="Sneaker 1" class="slide">
+                            <img src="../images/Shoe4-min.jpg" alt="Sneaker 2" class="slide">
+                            <img src="../images/Shoe6-min.jpg" alt="Sneaker 3" class="slide">
+                            <img src="../images/Shoe7-min.jpg" alt="Sneaker 4" class="slide">
+                        </div>
+                        <button class="prev" onclick="changeSlide(-1)" aria-label="Previous Slide">❮</button>
+                        <button class="next" onclick="changeSlide(1)" aria-label="Next Slide">❯</button>
+                        <div class="carousel-indicators" aria-label="Slide indicators">
+                            <span class="indicator" onclick="goToSlide(0)"></span>
+                            <span class="indicator" onclick="goToSlide(1)"></span>
+                            <span class="indicator" onclick="goToSlide(2)"></span>
+                            <span class="indicator" onclick="goToSlide(3)"></span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <section class="why-choose-us" aria-label="Why Choose Us">
+            <h2>Why Choose Sole Heaven?</h2>
+            <div class="values">
+                <div class="value">
+                    <i class="fa-solid fa-shoe-prints"></i>
+                    <h3>Premium Quality</h3>
+                    <p>We use only the best materials for comfort and durability.</p>
+                </div>
+                <div class="value">
+                    <i class="fa-solid fa-fire"></i>
+                    <h3>Trendy Designs</h3>
+                    <p>Stay ahead with our latest, fashion-forward collections.</p>
+                </div>
+                <div class="value">
+                    <i class="fa-solid fa-heart"></i>
+                    <h3>Customer Focused</h3>
+                    <p>Your satisfaction is our top priority—always.</p>
+                </div>
+                <div class="value">
+                    <i class="fa-solid fa-earth-asia"></i>
+                    <h3>Eco-Conscious</h3>
+                    <p>We care for the planet with sustainable practices.</p>
+                </div>
+            </div>
+        </section>
+        <section class="team-preview" aria-label="Meet the Team">
+            <h2>Meet Our Team</h2>
+            <div class="team-members">
+                <figure class="team-member">
+                    <img src="../images/Nitesh-min.jpg" alt="Team Member 1">
+                    <figcaption>
+                        <h4>Nitesh S.</h4>
+                        <p>product page designer</p>
+                    </figcaption>
+                </figure>
+                <figure class="team-member">
+                    <img src="../images/Prasan-min.jpg" alt="Team Member 2">
+                    <figcaption>
+                        <h4>Prasan M.</h4>
+                        <p>Home page designer</p>
+                    </figcaption>
+                </figure>
+                <figure class="team-member">
+                    <img src="../images/Stuti-min.jpg" alt="Team Member 3">
+                    <figcaption>
+                        <h4>Stuti K.</h4>
+                        <p>About us page designer</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <a href="../HTML/portfolio.html" class="team-link">See Full Team</a>
+        </section>
+        <section class="testimonials" aria-label="Customer Testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-list">
+                <blockquote>
+                    <p>"Sole Heaven shoes are the most comfortable I've ever worn. Stylish and durable!"</p>
+                    <footer>- Kiara A.</footer>
+                </blockquote>
+                <blockquote>
+                    <p>"Excellent customer service and fast delivery. Highly recommend!"</p>
+                    <footer>- Udit Narayan J.</footer>
+                </blockquote>
+                <blockquote>
+                    <p>"I love the eco-friendly approach. The shoes look great and feel even better."</p>
+                    <footer>- Sunny D.</footer>
+                </blockquote>
+            </div>
+        </section>
+            <section class="feed">
+            <h3>We strongly believe real feedback helps build trust and credibility.</h3><br>
+               <h2> Your feedback helps us improve! Share your thoughts below.</h2>
+            <div class="btn">
+                <button type="button">
+                <a href="../HTML/form.html" class="feedbtn" >YOUR FEEDBACK</a>
+                </button>
+                
+            </div>
+        </section>
+    </main>
+  
+    <!--footer section-->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <div class="logo-main">
+            <img src="../images/SOLEHEAVEN.png" alt="logo" />
+          </div>
+          <p class="footer-description">
+            Your one-stop shop for trendy, comfortable, and affordable sneakers.
+            We bring you the best footwear from around the world.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../HTML/home.html">Home</a></li>
+            <li><a href="../HTML/product.html">Products</a></li>
+            <li><a href="../HTML/aboutus.html">About Us</a></li>
+            <li><a href="../HTML/blog.html">Blog</a></li>
+            <li><a href="../HTML/research.html">Research</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <ul class="footer-contact contact-main">
+            <li><i class="fas fa-envelope"></i> support@soleheaven.com</li>
+            <li><i class="fas fa-phone"></i> +977-9834567281</li>
+            <li><i class="fas fa-map-marker-alt"></i> Dulari, Nepal</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Available Brands</h4>
+          <ul class="footer-brands">
+            <li>Goldstar</li>
+            <li>Adidas</li>
+            <li>Nike</li>
+            <li>Puma</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="copyright">&copy; 2025 Sole Heaven. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+    <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    const indicators = document.querySelectorAll('.indicator');
+
+    function showSlide(index) {
+        if (index >= totalSlides) currentSlide = 0;
+        else if (index < 0) currentSlide = totalSlides - 1;
+        else currentSlide = index;
+        const slidesContainer = document.querySelector('.slides');
+        slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+        indicators.forEach((ind, i) => {
+            ind.classList.toggle('active', i === currentSlide);
+        });
+    }
+    
+    function changeSlide(direction) {
+        showSlide(currentSlide + direction);
+    }
+    function goToSlide(index) {
+        showSlide(index);
+    }
+    // Auto-slide every 5 seconds
+    setInterval(() => {
+        changeSlide(1);
+    }, 5000);
+    // Initialize the first slide
+    showSlide(currentSlide);
+    // Keyboard navigation for carousel
+    window.addEventListener('keydown', (e) => {
+        if (document.activeElement.tagName === 'BODY') {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        }
+    });
+    // Navbar mobile toggle
+    document.querySelector('.icon').addEventListener('click', () => {
+        document.querySelector('nav ul').classList.toggle('show');
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoleHeaven | Products</title>
+    <link rel="icon" type="image/x-icon" href="../images/soleheaven_favLogo.png" width="32px">
+    <link rel="stylesheet" href="../CSS/prodectdetail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <!--html codes for navbar-->
+      <nav class="navbar">
+        <div class="logo">
+          <a href="../HTML/home.html">
+            <div class="logo-main">
+              <img src="../images/SOLEHEAVEN.png" alt="logo" />
+            </div>
+          </a>
+        </div>
+        <ul>
+          <li><a href="../HTML/home.html">Home</a></li>
+          <li><a href="../HTML/product.html">Product</a></li>
+          <li><a href="../HTML/about.html">About Us </a></li>
+          <li><a href="../HTML/blog.html">Blog</a></li>
+          <li><a href="../HTML/research.html">Research Page</a></li>
+        </ul>
+        <!--add to cart and bar icon-->
+        <div class="icon">
+          <div
+            class="cart-container"
+            id="cart-container"
+            style="position: relative"
+          >
+            <i
+              class="fa-solid fa-cart-shopping"
+              id="cart-icon"
+              style="cursor: pointer"
+            ></i>
+            <span id="cart-count">0</span>
+
+            <!-- Dropdown -->
+            <div class="cart-dropdown" id="cart-dropdown" style="display: none">
+              <div id="cart-items"></div>
+              <div
+                id="cart-total"
+                style="
+                  padding: 10px;
+                  border-top: 1px solid #ccc;
+                  font-weight: bold;
+                "
+              >
+                Total: $0.00
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--base for js -->
+        <i class="fa-solid fa-bars" style="cursor: pointer"></i
+        ><!--bar icon-->
+      </nav>
+      <!--Html codes for navbar ends here-->
+    </header>
+    <div class="sale-banner">
+      <span>New Styles On Sale: Up To 40% Off</span>
+      <a href="#">Shop All Our New Markdowns</a>
+    </div>
+    <main>
+      <div class="alerts" id="alerts">
+        <div class="cart" id="cart">
+          <span class="msg">
+            <i class="uil uil-check-circle"></i>
+            Added to the cart.
+          </span>
+          <span class="close" onclick="closeAlerts()">&times;</span>
+        </div>
+      </div>
+      <div class="alertz" id="alertz">
+        <div class="wishlist" id="wishlist">
+          <span class="msg">
+            <i class="uil uil-check-circle"></i>
+            Added to your wishlist.
+          </span>
+          <span class="close" onclick="closeAlerts()">&times;</span>
+        </div>
+      </div>
+      <div class="alertsz" id="alertsz">
+        <div class="submit" id="submit">
+          <span class="msg">
+            <i class="uil uil-check-circle"></i>
+            Review submitted.
+          </span>
+          <span class="close" onclick="closeAlerts()">&times;</span>
+        </div>
+      </div>
+
+      <div class="nab">
+        <a href="index.html">Home</a>/<a href="../HTML/product.html">Product</a>/<a
+          href="#"
+          >Shoe1</a
+        >
+      </div>
+      <div class="prode bo">
+        <div class="imgsec bo">
+          <div class="mainimg bo">
+            <img
+              class="mi1"
+              src="../images/visualelectric-1746006660776.png"
+              alt="p1"
+            />
+          </div>
+          <div class="moreimg">
+            <div class="smlimg smlimg1">
+              <span class="bent-img img01" style="align-items: end">
+                <img
+                  src="../images/visualelectric-1746006674258.png"
+                  alt=""
+                />
+              </span>
+              <span class="bent-img img02">
+                <img
+                  src="../images/visualelectric-1746006705588.png"
+                  alt=""
+                />
+              </span>
+            </div>
+            <div class="smlimg smlimg2">
+              <span class="bent-img img03">
+                <img src="../images/IMG_20250430_153107.png" alt="" />
+              </span>
+              <span class="bent-img img04">
+                <img
+                  src="../images/visualelectric-1746006717924.png"
+                  alt=""
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+        <section class="right-side">
+          <div class="proddet">
+            <div class="sonam">
+              <h2>Nike Air Jordan</h2>
+              <div class="df rev">
+                <div class="m1">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <p style="text-decoration: underline">42 reviews</p>
+              </div>
+            </div>
+            <div class="colour-selec">
+              <div class="colsec df font-sz">
+                <p>Color:</p>
+                <p id="color_name">Beige</p>
+              </div>
+              <div class="df">
+                <span class="color"
+                  ><input
+                    type="radio"
+                    class="rdi black"
+                    name="c1"
+                    id="beige"
+                    value="beige"
+                    onclick="clrbeige()"
+                /></span>
+                <span class="color"
+                  ><input
+                    type="radio"
+                    class="rdi white"
+                    name="c1"
+                    id="white"
+                    value="white"
+                    onclick="clrwhite()"
+                /></span>
+                <span class="color"
+                  ><input
+                    type="radio"
+                    class="rdi brown"
+                    name="c1"
+                    id="black"
+                    value="black"
+                    onclick="clrblack()"
+                /></span>
+              </div>
+            </div>
+            <div class="sizez">
+              <div class="size font-sz">Size</div>
+              <div class="sz1">
+                <input
+                  type="radio"
+                  id="size-40-5"
+                  name="size"
+                  value="40.5"
+                  hidden
+                />
+                <label for="size-40-5" class="sz01">40.5</label>
+                <input
+                  type="radio"
+                  id="size-41"
+                  name="size"
+                  value="41"
+                  hidden
+                />
+                <label for="size-41" class="sz01">41</label>
+                <input
+                  type="radio"
+                  id="size-42"
+                  name="size"
+                  value="42"
+                  hidden
+                />
+                <label for="size-42" class="sz01">42</label>
+                <input
+                  type="radio"
+                  id="size-43"
+                  name="size"
+                  value="43"
+                  hidden
+                />
+                <label for="size-43" class="sz01">43</label>
+                <input
+                  type="radio"
+                  id="size-44"
+                  name="size"
+                  value="44"
+                  hidden
+                />
+                <label for="size-44" class="sz01">44</label>
+                <input
+                  type="radio"
+                  id="size-45"
+                  name="size"
+                  value="45"
+                  hidden
+                />
+                <label for="size-45" class="sz01">45</label>
+                <input
+                  type="radio"
+                  id="size-46"
+                  name="size"
+                  value="46"
+                  hidden
+                />
+                <label for="size-46" class="sz01">46</label>
+              </div>
+            </div>
+            <div class="df price">
+              <p>Rs.1900</p>
+              <span>Rs.2000</span>
+            </div>
+            <div class="btns">
+              <button class="adt" onclick="cartalert()">
+                <i class="uil uil-shopping-bag"></i> Add to cart
+              </button>
+              <button class="heart" onclick="heartalert()">
+                <i class="uil uil-heart"></i>
+              </button>
+            </div>
+            <span class="line"></span>
+            <div class="diliver">
+              <span class="hd"
+                ><i class="uil uil-box"></i>
+                <p>Home Delivery</p></span
+              >
+              <ul>
+                <li>
+                  Free standard shipping on order Rs.3500+(5-10 businesss days)
+                </li>
+                <li>Same-day delivery(In selected cities)</li>
+              </ul>
+            </div>
+            <span class="line"></span>
+            <div class="decs">
+              <span class="desctop"
+                ><i class="uil uil-info-circle"></i>
+                <p>Description</p></span
+              >
+              <span class="descinfo"
+                >Experience the difference: Unmatched Comfort: Enjoy all-day
+                comfort with expertly designed cushioning and flexible
+                construction. Versatile Style: Perfect for work, casual outings,
+                and everything in between. Premium Quality: Crafted from
+                high-quality materials for lasting durability and a luxurious
+                feel. Sleek Design: The modern aesthetic and sophisticated beige
+                color make a statement wherever you go. Upgrade your footwear
+                game with the Nike Air Jordan. Order yours today!</span
+              >
+            </div>
+            <span class="line"></span>
+            <div class="details-composition">
+              <span class="desctop">
+                <i class="uil uil-info-circle"></i>
+                <p>Details and composition</p>
+              </span>
+              <ul>
+                <li>Style VN0000T8BMX</li>
+                <li>Iconic low-top, Sidestripe™ shoe</li>
+                <li>Wide construction</li>
+                <li>Durable suede and canvas uppers</li>
+                <li>Lace-up closure</li>
+                <li>Reinforced toe caps</li>
+                <li>Supportive padded collars</li>
+                <li>Signature rubber waffle outsoles</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="signup-banner">
+        <p>JOIN OUR SOLECLUB & GET 15% OFF</p>
+        <button class="signup-btn">
+          SIGN UP FOR FREE <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+      <div class="reviews-section">
+        <div class="reviews-summary">Reviews (5)</div>
+        <div class="reviews-flex-container">
+          <div class="main-rating">
+            <span class="rating-score">4.0</span>
+            <div class="rating-stars">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </div>
+          </div>
+          <button class="write-review-btn" onclick="openBar()">
+            WRITE A REVIEW <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="comment-container">
+          <div class="comment">
+            <div class="comment-left">
+              <div class="comment-avatar">
+                <img
+                  src="https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg"
+                  alt="pp"
+                />
+              </div>
+              <div class="comment-name">Cannonball</div>
+              <div class="comment-stars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+            </div>
+            <div class="comment-right">
+              <div class="comment-header">
+                <div class="comment-subject">Fast Faster Fastest</div>
+                <div class="comment-date">May 15, 2025</div>
+              </div>
+              <div class="comment-body">
+                Awesome shoes. Running faster. Awesome shoes. Running faster.
+              </div>
+              <div class="comment-actions">
+                <span><i class="far fa-thumbs-up"></i> 0</span>
+                <span><i class="far fa-thumbs-down"></i> 0</span>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="comment-left">
+              <div class="comment-avatar">
+                <img
+                  src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  alt="pp"
+                />
+              </div>
+              <div class="comment-name">RunningGuru</div>
+              <div class="comment-stars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+            </div>
+            <div class="comment-right">
+              <div class="comment-header">
+                <div class="comment-subject">Good for light runs</div>
+                <div class="comment-date">May 12, 2025</div>
+              </div>
+              <div class="comment-body">
+                Provides decent support for shorter distances. Not for serious
+                runners.
+              </div>
+              <div class="comment-actions">
+                <span><i class="far fa-thumbs-up"></i> 2</span>
+                <span><i class="far fa-thumbs-down"></i> 0</span>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="comment-left">
+              <div class="comment-avatar">
+                <img
+                  src="https://images.pexels.com/photos/1821095/pexels-photo-1821095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  alt="pp"
+                />
+              </div>
+              <div class="comment-name">Fashionista</div>
+              <div class="comment-stars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+              </div>
+            </div>
+            <div class="comment-right">
+              <div class="comment-header">
+                <div class="comment-subject">Love the style!</div>
+                <div class="comment-date">May 10, 2025</div>
+              </div>
+              <div class="comment-body">
+                These shoes look amazing with everything. So many compliments!
+              </div>
+              <div class="comment-actions">
+                <span><i class="far fa-thumbs-up"></i> 8</span>
+                <span><i class="far fa-thumbs-down"></i> 0</span>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="comment-left">
+              <div class="comment-avatar">
+                <img
+                  src="https://images.pexels.com/photos/810775/pexels-photo-810775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  alt="pp"
+                />
+              </div>
+              <div class="comment-name">HappyCustomer</div>
+              <div class="comment-stars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+            </div>
+            <div class="comment-right">
+              <div class="comment-header">
+                <div class="comment-subject">Exactly as pictured</div>
+                <div class="comment-date">May 6, 2025</div>
+              </div>
+              <div class="comment-body">
+                Very happy with my purchase. The quality is excellent.
+              </div>
+              <div class="comment-actions">
+                <span><i class="far fa-thumbs-up"></i> 10</span>
+                <span><i class="far fa-thumbs-down"></i> 0</span>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="comment-left">
+              <div class="comment-avatar">
+                <img
+                  src="https://images.pexels.com/photos/5486199/pexels-photo-5486199.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  alt="pp"
+                />
+              </div>
+              <div class="comment-name">Reviewer10</div>
+              <div class="comment-stars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+            </div>
+            <div class="comment-right">
+              <div class="comment-header">
+                <div class="comment-subject">Solid purchase</div>
+                <div class="comment-date">April 28, 2025</div>
+              </div>
+              <div class="comment-body">
+                Good value for the price. Would buy again.
+              </div>
+              <div class="comment-actions">
+                <span><i class="far fa-thumbs-up"></i> 4</span>
+                <span><i class="far fa-thumbs-down"></i> 1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--footer section-->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <div class="logo-main">
+            <img src="../images/SOLEHEAVEN.png" alt="logo" />
+          </div>
+          <p class="footer-description">
+            Your one-stop shop for trendy, comfortable, and affordable sneakers.
+            We bring you the best footwear from around the world.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../HTML/home.html">Home</a></li>
+            <li><a href="../HTML/product.html">Products</a></li>
+            <li><a href="../HTML/aboutus.html">About Us</a></li>
+            <li><a href="../HTML/blog.html">Blog</a></li>
+            <li><a href="../HTML/research.html">Research</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <ul class="footer-contact contact-main">
+            <li><i class="fas fa-envelope"></i> support@soleheaven.com</li>
+            <li><i class="fas fa-phone"></i> +977-9834567281</li>
+            <li><i class="fas fa-map-marker-alt"></i> Dulari, Nepal</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Available Brands</h4>
+          <ul class="footer-brands">
+            <li>Goldstar</li>
+            <li>Adidas</li>
+            <li>Nike</li>
+            <li>Puma</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="copyright">&copy; 2025 Sole Heaven. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- Start Sidebar HTML -->
+    <div id="mysidebar" class="sidebar">
+      <div class="top-sec">
+        <h2>Write a Review</h2>
+        <span class="closebtn" onclick="closeBar()">&times;</span>
+      </div>
+      <div class="product-img">
+        <img
+          class="mi1"
+          src="../images/visualelectric-1746006660776.png"
+          alt="p1"
+        />
+      </div>
+      <form class="review-form">
+        <label for="headline"
+          >Review Headline <span class="required-sign">*</span></label
+        >
+        <input
+          type="text"
+          id="headline"
+          name="headline"
+          required
+          placeholder="Great Product"
+        />
+
+        <label for="nickname"
+          >Nickname<span class="required-sign">*</span></label
+        >
+        <input
+          type="text"
+          id="nickname"
+          name="nickname"
+          required
+          placeholder="Ex. GoldenDew"
+        />
+
+        <label for="rating"
+          >Your Rating<span class="required-sign">*</span></label
+        >
+        <div class="ratingmain">
+          <input
+            type="radio"
+            id="star5"
+            name="rating"
+            value="5"
+            required
+          /><label for="star5" title="5 stars">&#9733;</label>
+          <input type="radio" id="star4" name="rating" value="4" /><label
+            for="star4"
+            title="4 stars"
+            >&#9733;</label
+          >
+          <input type="radio" id="star3" name="rating" value="3" /><label
+            for="star3"
+            title="3 stars"
+            >&#9733;</label
+          >
+          <input type="radio" id="star2" name="rating" value="2" /><label
+            for="star2"
+            title="2 stars"
+            >&#9733;</label
+          >
+          <input type="radio" id="star1" name="rating" value="1" /><label
+            for="star1"
+            title="1 star"
+            >&#9733;</label
+          >
+        </div>
+
+        <label for="comments"
+          >Comments<span class="required-sign">*</span></label
+        >
+        <textarea
+          id="comments"
+          name="comments"
+          rows="4"
+          required
+          placeholder="This was such a good purchage. Best shoes ever purchased"
+        ></textarea>
+
+        <button type="submit" class="submit-button" onclick="submitalert()">
+          Submit Review
+        </button>
+      </form>
+    </div>
+    <!-- End Sidebar HTML -->
+    <script>
+      function clrbeige() {
+        document.getElementById("color_name").innerHTML = "Beige";
+      }
+      function clrwhite() {
+        document.getElementById("color_name").innerHTML = "White";
+      }
+      function clrblack() {
+        document.getElementById("color_name").innerHTML = "Black";
+      }
+      /* Start Sidebar JS */
+      function openBar() {
+        document.getElementById("mysidebar").style.width = "400px";
+      }
+
+      function closeBar() {
+        document.getElementById("mysidebar").style.width = "0";
+      }
+      /* End Sidebar JS */
+    </script>
+    <script src="../JS/product.js"></script>
+  </body>
+</html>

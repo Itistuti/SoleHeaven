@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sole Heaven</title>
+    <link rel="icon" type="image/x-icon" href="../images/soleheaven_favLogo.png" width="32px">
+    <link rel="stylesheet" href="../CSS/blog.css" />
+        <link rel="icon" type="image/x-icon" href="../images/soleheaven_favLogo.png" width="32px">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <!--html codes for navbar-->
+      <nav class="navbar">
+        <div class="logo">
+          <a href="../HTML/home.html">
+            <div class="logo-main">
+              <img src="../images/SOLEHEAVEN.png" alt="logo" />
+            </div>
+          </a>
+        </div>
+        <ul>
+          <li><a href="../HTML/home.html">Home</a></li>
+          <li><a href="../HTML/product.html">Product</a></li>
+          <li><a href="../HTML/aboutus.html">About Us </a></li>
+          <li><a href="../HTML/blog.html">Blog</a></li>
+          <li><a href="../HTML/research.html">Research Page</a></li>
+        </ul>
+        <!--add to cart and bar icon-->
+        <div class="icon">
+          <div
+            class="cart-container"
+            id="cart-container"
+            style="position: relative"
+          >
+          <a href="../HTML/home.html"><i
+            class="fa-solid fa-cart-shopping"
+            id="cart-icon"
+            style="cursor: pointer"
+          ></i></a>
+            
+            
+
+            <!-- Dropdown -->
+            <div class="cart-dropdown" id="cart-dropdown" style="display: none">
+              <div id="cart-items"></div>
+              <div
+                id="cart-total"
+                style="
+                  padding: 10px;
+                  border-top: 1px solid #ccc;
+                  font-weight: bold;
+                "
+              >
+                Total: $0.00
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--base for js -->
+        <i class="fa-solid fa-bars" style="cursor: pointer"></i
+        ><!--bar icon-->
+      </nav>
+      <!--Html codes for navbar ends here-->
+    </header>
+    <section class="hero-section">
+      <div class="hero-title">
+        <h1 align="center"><b>SOLE HEAVEN's BLOG</b></h1>
+        <h1>
+          Explore the Trendy Footwear<br />
+          Collections with<br />
+          Sole Heaven<br />
+        </h1>
+      </div>
+    </section>
+    <section class="slider-section">
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slide">
+            <img
+              src="../images/banner12.jpg"
+              alt="Modern Sneakers"
+              class="slide-img"
+            />
+            <div class="slide-content">
+              <p>Discover the latest in footwear fashion</p>
+              <a href="../HTML/product.html" class="slide-btn">Shop Now</a>
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="../images/banner101.jpg"
+              alt="Running Shoes"
+              class="slide-img"
+            />
+            <div class="slide-content">
+              <p>Designed for your active lifestyle</p>
+              <a href="../HTML/product.html" class="slide-btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <button class="slider-btn prev-btn" aria-label="Previous slide">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-btn next-btn" aria-label="Next slide">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="slider-dots"></div>
+      </div>
+    </section>
+    <!--html for blog cards-->
+    <!--first row-->
+    <section class="blog-section">
+      <div class="blog-container">
+        <div class="blog-card">
+          <div class="blog-image">
+            <img
+              src="../images/Gympolo Unisex RunStyle Sneakers, Black _ 44.jpeg"
+              alt="Sneakers"
+            />
+          </div>
+          <div class="blog-content">
+            <h3>How Technology is impacting on footwear industry?</h3>
+            <p>
+              Technology and innovations are helping us predict the consumer
+              requirement on footwearstyle. Nowadays AI is making huge impact to
+              explore ideas regarding requirements of customers so, Modern brands and corporations
+               are exploring new approaches 
+            </p>
+            <a href="../HTML/blog-1.html" class="read-more-btn"
+              >Read More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-image">
+            <img
+              src="../images/Women's Casual Shoes Outfit Accessories.jpeg"
+              alt="Women's Casual Shoes"
+            />
+          </div>
+          <div class="blog-content">
+            <h3>Technology Advancements with footwear designs</h3>
+            <p>
+              We focus on our consumer's choice and fulfill their demand. Our
+              footwear industry is integrating technologies to make the process
+              of designing, selling, satisfying consumer's demand.Today's footwear
+              industry has been constantly evolving
+            </p>
+            <a href="../HTML/blog-2.html" class="read-more-btn"
+              >Read More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-image">
+            <img src="../images/shoes100.jpg" alt="Shoes Collection" />
+          </div>
+          <div class="blog-content">
+            <h3>Grab your favorite footwear on affordable price!</h3>
+            <p>
+              Explore the latest collections on reasonable price, we are
+              featuring trendy, sports shoes and comfy sneakers as well as
+              running shoes that elevate your everyday style.Today, improving
+               your style does not need to cost a lot.
+            </p>
+            <a href="../HTML/blog-3.html" class="read-more-btn"
+              >Read More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <!--second row-->
+      <div class="blog-container">
+        <div class="blog-card">
+          <div class="blog-image">
+            <img
+              src="../images/USS Shoes Cathryn Women's Pumps - Black _ 6 _ B - Medium.jpeg"
+              alt="Women's Pumps"
+            />
+          </div>
+          <div class="blog-content">
+            <h3>Comfortable meets classy style</h3>
+            <p>
+              Explore the latest collections of heels with comfortable sole with
+              classy vibe. Sole Heaven women's collection offers wide range of
+              options for stylish heels for every occasion and every classic outfits
+              embrasing your confident personality
+            </p>
+            <a href="#" class="read-more-btn"
+              >Read More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-image">
+            <img src="../images/Men Shoes.jpeg" alt="Men's Shoes" />
+          </div>
+          <div class="blog-content">
+            <h3>Discover the variety of boots that can serve any occasion</h3>
+            <p>
+              Shoes that go with everything enable easy coordination and the
+              ability to dress. These polished appearance shining shoes can be
+              worn on formal suits, jeans to elevate your outfits for bold looks.
+              We have various kinds of 
+            </p>
+            <a href="#" class="read-more-btn"
+              >Read More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-image">
+            <img src="../images/foot2.jpg" alt="Comfortable Shoes" />
+          </div>
+          <div class="blog-content">
+            <h3>Make your every steps feel like heaven</h3>
+            <p>
+              Sole Heaven's collections can make your every steps comfortable as
+              our sole is made from soft, lightweight leather, making them a
+              great choice for everyday wear.
+            </p>
+            <a href="#" class="read-more-btn"
+              >Read More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <!--third row-->
+    <section>
+    <div class="blog-container">
+      <div class="blog-card">
+        <div class="blog-image">
+          <img
+            src="../images/sshoes3.jpg"
+            alt="onisuka tiger"
+          />
+        </div>
+        <div class="blog-content">
+          <h3>First time in Nepal!! Sole heaven is selling lastest onisuka tiger shoes</h3>
+          <p>
+            By our various market reasearch, we assumed that our customer are willing to 
+            purchase onisuka tiger shoes which are recently trend in different countries but in Nepal.
+            Thanks to technology we can predict our customer's likes and dislikes.
+          </p>
+          <a href="#" class="read-more-btn"
+            >Read More <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="../images/sshoes2.jpg" alt="girly pops" />
+        </div>
+        <div class="blog-content">
+          <h3>Hurry up women!! Sole Heaven has added aesthetic sandles in foryour girly look.</h3>
+          <p>
+           Trying to find aesthetic sandles? The demand for aesthetic sandles with girly and feminine has slightly raised.
+            We have plenty of options to for your shoes wardrobe. #grabitasap
+          </p>
+          <a href="#" class="read-more-btn"
+            >Read More <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="../images/sshoes.jpg" alt="unisex shoes" />
+        </div>
+        <div class="blog-content">
+          <h3>Puma's speed cat sneakers. PUMA x SOLE HEAVEN</h3>
+          <p>
+            Best styling choice for both men and women. Puma's speed cat shoes are now available 
+            with wide range of color color options also meeting casual as well as classic looks and
+            sporty vibes. 
+          </p>
+          <a href="#" class="read-more-btn"
+            >Read More <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </section>
+      
+      
+    <!--code for slider secttion-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.querySelector(".slider");
+        const slides = document.querySelectorAll(".slide");
+        const prevBtn = document.querySelector(".prev-btn");
+        const nextBtn = document.querySelector(".next-btn");
+        const dotsContainer = document.querySelector(".slider-dots");
+
+        let currentSlide = 0;
+        const slideCount = slides.length;
+
+        // Create dots
+        slides.forEach((_, index) => {
+          const dot = document.createElement("div");
+          dot.classList.add("dot");
+          if (index === 0) dot.classList.add("active");
+          dot.addEventListener("click", () => goToSlide(index));
+          dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll(".dot");
+
+        function updateSlider() {
+          slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+          dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentSlide);
+          });
+        }
+
+        function goToSlide(index) {
+          currentSlide = index;
+          updateSlider();
+        }
+
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slideCount;
+          updateSlider();
+        }
+
+        function prevSlide() {
+          currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+          updateSlider();
+        }
+
+        // Event listeners
+        nextBtn.addEventListener("click", nextSlide);
+        prevBtn.addEventListener("click", prevSlide);
+
+        // Auto slide every 3 seconds
+        setInterval(nextSlide, 3000);
+      });
+    </script>
+    <!--footer section-->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <div class="logo-main">
+            <img src="../images/SOLEHEAVEN.png" alt="logo" />
+          </div>
+          <p class="footer-description">
+            Your one-stop shop for trendy, comfortable, and affordable sneakers.
+            We bring you the best footwear from around the world.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../HTML/home.html">Home</a></li>
+            <li><a href="../HTML/product.html">Products</a></li>
+            <li><a href="../HTML/aboutus.html">About Us</a></li>
+            <li><a href="../HTML/blog.html">Blog</a></li>
+            <li><a href="../HTML/research.html">Research</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <ul class="footer-contact contact-main">
+            <li><i class="fas fa-envelope"></i> support@soleheaven.com</li>
+            <li><i class="fas fa-phone"></i> +977-9834567281</li>
+            <li><i class="fas fa-map-marker-alt"></i> Dulari, Nepal</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Available Brands</h4>
+          <ul class="footer-brands">
+            <li>Goldstar</li>
+            <li>Adidas</li>
+            <li>Nike</li>
+            <li>Puma</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="copyright">&copy; 2025 Sole Heaven. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

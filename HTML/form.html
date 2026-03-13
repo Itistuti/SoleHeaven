@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="icon" type="image/x-icon" href="../images/soleheaven_favLogo.png" width="32px">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap">
+    <link rel="stylesheet" href="../CSS/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="Form.js"></script>
+</head>
+<body>
+    <header>
+      <!--html codes for navbar-->
+      <nav class="navbar">
+        <div class="logo">
+          <a href="../HTML/home.html">
+            <div class="logo-main">
+              <img src="../images/SOLEHEAVEN.png" alt="logo" />
+            </div>
+          </a>
+        </div>
+        <ul>
+          <li><a href="../HTML/home.html">Home</a></li>
+          <li><a href="../HTML/product.html">Product</a></li>
+          <li><a href="../HTML/aboutus.html">About Us </a></li>
+          <li><a href="../HTML/blog.html">Blog</a></li>
+          <li><a href="../HTML/research.html">Research Page</a></li>
+        </ul>
+        <!--add to cart and bar icon-->
+        <div class="icon">
+          <div
+            class="cart-container"
+            id="cart-container"
+            style="position: relative"
+          >
+          <a href="../HTML/home.html"><i
+            class="fa-solid fa-cart-shopping"
+            id="cart-icon"
+            style="cursor: pointer"
+          ></i></a>
+            
+            
+
+            <!-- Dropdown -->
+            <div class="cart-dropdown" id="cart-dropdown" style="display: none">
+              <div id="cart-items"></div>
+              <div
+                id="cart-total"
+                style="
+                  padding: 10px;
+                  border-top: 1px solid #ccc;
+                  font-weight: bold;
+                "
+              >
+                Total: $0.00
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--base for js -->
+        <i class="fa-solid fa-bars" style="cursor: pointer"></i
+        ><!--bar icon-->
+      </nav>
+      <!--Html codes for navbar ends here-->
+    </header>
+
+
+<main class="form-main-wrapper">
+    <header class="form-header">
+        <h1>We Value Your Feedback</h1>
+        <p class="form-intro">Let us know your thoughts, suggestions, or concerns. Your feedback helps us improve!</p>
+    </header>
+    <section class="feedback-section" aria-label="Feedback Form">
+        <div class="feedback-card">
+            <h2>Feedback</h2>
+            <form aria-label="Feedback Form" autocomplete="off">
+                <div class="form-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" required placeholder="First Name" aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" required placeholder="Last Name" aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com" aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Your Feedback" aria-required="true"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+                <div class="form-success" style="display:none;" role="alert">Thank you for your feedback!</div>
+            </form>
+        </div>
+    </section>
+</main>
+
+<script>
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  alert("Your feedback has been submitted");
+});
+
+ document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".feedback-section form");
+    const successMessage = document.querySelector(".form-success");
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+
+      const firstname = document.getElementById("firstname").value.trim();
+      const lastname = document.getElementById("lastname").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!firstname || !lastname || !email || !message) {
+        alert("Please fill in all the fields.");
+        return;
+      }
+
+      console.log("Feedback Submitted:", {
+        firstname,
+        lastname,
+        email,
+        message,
+      });
+
+      submitButton.textContent = "Submitted";
+      submitButton.classList.add("submitted");
+
+      successMessage.style.display = "block";
+
+      form.reset();
+
+      setTimeout(() => {
+        submitButton.textContent = "Submit";
+        submitButton.classList.remove("submitted");
+      }, 1000);
+    });
+  });
+
+const formWrapper = document.querySelector(".feedback-card");
+
+formWrapper.classList.add("color-theme-submitted");
+
+formWrapper.classList.remove("color-theme-submitted");
+
+</script>
+
+
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <div class="logo-main">
+            <img src="../images/SOLEHEAVEN.png" alt="logo" />
+          </div>
+          <p class="footer-description">
+            Your one-stop shop for trendy, comfortable, and affordable sneakers.
+            We bring you the best footwear from around the world.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../HTML/home.html">Home</a></li>
+            <li><a href="../HTML/product.html">Products</a></li>
+            <li><a href="../HTML/aboutus.html">About Us</a></li>
+            <li><a href="../HTML/blog.html">Blog</a></li>
+            <li><a href="../HTML/research.html">Research</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <ul class="footer-contact contact-main">
+            <li><i class="fas fa-envelope"></i> support@soleheaven.com</li>
+            <li><i class="fas fa-phone"></i> +977-9834567281</li>
+            <li><i class="fas fa-map-marker-alt"></i> Dulari, Nepal</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Available Brands</h4>
+          <ul class="footer-brands">
+            <li>Goldstar</li>
+            <li>Adidas</li>
+            <li>Nike</li>
+            <li>Puma</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="copyright">&copy; 2025 Sole Heaven. All rights reserved.</p>
+      </div>
+    </footer>
+</body>
+</html>
+

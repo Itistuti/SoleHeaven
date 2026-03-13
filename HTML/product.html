@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../images/soleheaven_favLogo.png" width="32px">
+    <title>SoleHeaven | Products</title>
+    <link rel="stylesheet" href="../CSS/product.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="../images/image (1).jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      .t1 {
+        border: 2px solid #f7f4f4;
+        height: 400px;
+        width: 300px;
+        padding: 12px;
+        border-radius: 24px;
+      }
+    </style>
+    <script src="../JS/product.js"></script>
+  </head>
+  <body>
+    <div class="alerts" id="alerts">
+      <div class="cart" id="cart">
+        <span class="msg">
+          <i class="uil uil-check-circle"></i>
+          Added to the cart.
+        </span>
+        <span class="close" onclick="closeAlerts()">&times;</span>
+      </div>
+    </div>
+    <div class="alertz" id="alertz">
+      <div class="wishlist" id="wishlist">
+        <span class="msg">
+          <i class="uil uil-check-circle"></i>
+          Added to your wishlist
+        </span>
+        <span class="close" onclick="closeAlerts()">&times;</span>
+      </div>
+    </div>
+    <header>
+      <!--html codes for navbar-->
+      <nav class="navbar">
+        <div class="logo">
+          <a href="../HTML/home.html">
+            <div class="logo-main">
+              <img src="../images/SOLEHEAVEN.png" alt="logo" />
+            </div>
+          </a>
+        </div>
+        <ul>
+          <li><a href="../HTML/home.html">Home</a></li>
+          <li><a href="../HTML/product.html">Product</a></li>
+          <li><a href="../HTML/aboutus.html">About Us </a></li>
+          <li><a href="../HTML/blog.html">Blog</a></li>
+          <li><a href="../HTML/research.html">Research Page</a></li>
+        </ul>
+        <!--add to cart and bar icon-->
+        <div class="icon">
+          <div
+            class="cart-container"
+            id="cart-container"
+            style="position: relative"
+          >
+          <a href="../HTML/home.html"><i
+            class="fa-solid fa-cart-shopping"
+            id="cart-icon"
+            style="cursor: pointer"
+          ></i></a>
+            
+
+            <!-- Dropdown -->
+            <div class="cart-dropdown" id="cart-dropdown" style="display: none">
+              <div id="cart-items"></div>
+              <div
+                id="cart-total"
+                style="
+                  padding: 10px;
+                  border-top: 1px solid #ccc;
+                  font-weight: bold;
+                "
+              >
+                Total: $0.00
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--base for js -->
+        <i class="fa-solid fa-bars" style="cursor: pointer"></i
+        ><!--bar icon-->
+      </nav>
+      <!--Html codes for navbar ends here-->
+    </header>
+    <div class="sale-banner">
+      <span>New Styles On Sale: Up To 40% Off</span>
+      <a href="#">Shop All Our New Markdowns</a>
+    </div>
+    <!-- Main section for product catalog -->
+    <main>
+      <!-- This is the catagory selection section -->
+      <aside class="cate">
+        <section>
+          <h2 style="margin-left: 0px; margin-top: auto">Categories</h2>
+          <ul>
+            <li><a href="../HTML/product.html">Mens' Shoes</a></li>
+            <hr />
+            <li><a href="../HTML/productwomen.html">Womens' Shoes</a></li>
+            <hr />
+            <li><a href="">Kids' Shoes</a></li>
+            <hr />
+            <li><a href="">Brand</a></li>
+            <hr />
+            <li><a href="">Color</a></li>
+            <hr />
+            <li><a href="">Price</a></li>
+            <hr />
+          </ul>
+        </section>
+      </aside>
+      <!-- section divider -->
+      <span class="line"></span>
+      <!-- product are here -->
+      <div class="product_catlog">
+        <div>
+          <section class="c1">
+            <h2 style="width: 180px; margin: auto" class="m_w">Mens' Shoes</h2>
+            <hr
+              style="
+                width: 90%;
+                height: 0px;
+                margin-left: 0px;
+                align-self: center;
+              "
+            />
+          </section>
+          <section class="c3">
+            <p>100 items found</p>
+            <select class="filt" name="filter" id="filter">
+              <option value="Relevence">Relevence</option>
+              <option value="New arrival">New arrival</option>
+              <option value="Rating">Rating</option>
+              <option value="Best Seller">Best Seller</option>
+              <option value="Price: Low to High">Price: Low to High</option>
+              <option value="Price: High to Low">Price: High to Low</option>
+            </select>
+          </section>
+        </div>
+        <div class="prds">
+          <div class="pdtrow">
+            <div class="product-card c1">
+              <a href="../HTML/productdetail.html" class="c1">
+                <div class="product-image">
+                  <img
+                    class="pic1"
+                    src="../images/IMG_20250430_153107.png"
+                    alt="shoe1"
+                    height="300px"
+                  />
+                </div>
+              </a>
+              <div class="product-title">
+                <h4 class="c1">Nike Air Jordan</h4>
+              </div>
+              <div class="product-details">
+                <div class="price-container">
+                  <span>Rs. 6750.00</span>
+                  <span class="discount">-30%</span>
+                </div>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="bt1 hrt" id="heart" onclick="heartalert()">
+                  &#9825;
+                </button>
+                <button class="bt1 adc" id="cart" onclick="addToCart('nike air jordan', 6750.00) ">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div class="product-card c1">
+              <div class="product-image">
+                <img
+                  class="pic1"
+                  src="https://www.goldstarshoes.com/Media/New%20Folder_25/New%20Folder_26/107a0442.jpg"
+                  alt="shoe1"
+                />
+              </div>
+              <div class="product-title">
+                <h4 class="c1">Teck-02 Goldstar</h4>
+              </div>
+              <div class="product-details">
+                <div class="price-container">
+                  <span>Rs 3599.10</span>
+                  <span class="discount">-15%</span>
+                </div>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="bt1 hrt" id="heart" onclick="heartalert()">
+                  &#9825;
+                </button>
+                <button class="bt1 adc" id="cart" onclick="addToCart('Teck-02 Goldstar', 3599.10)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div class="product-card c1">
+              <div class="product-image">
+                <img
+                  class="pic1"
+                  src="https://www.goldstarshoes.com/Media/New%20Folder_25/New%20Folder_2/107a0407.jpg"
+                  alt="shoe1"
+                />
+              </div>
+              <div class="product-title">
+                <h4 class="c1">Teck-01 Goldstar</h4>
+              </div>
+              <div class="product-details">
+                <div class="price-container">
+                  <span>Rs 3599.10</span>
+                  <span class="discount">-20%</span>
+                </div>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="bt1 hrt" id="heart" onclick="heartalert()">
+                  &#9825;
+                </button>
+                <button class="bt1 adc" id="cart" onclick="addToCart('Teck-01 Goldstar',3599.10)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="pdtrow">
+            <div class="product-card c1">
+              <div class="product-image">
+                <img
+                  class="pic1"
+                  src="https://www.goldstarshoes.com/Media/New%20Folder_25/New%20Folder_26/24f04203_d-beige_4.jpg"
+                  alt="shoe1"
+                />
+              </div>
+              <div class="product-title">
+                <h4 class="c1">Teck-06 Casual Shoes</h4>
+              </div>
+              <div class="product-details">
+                <div class="price-container">
+                  <span>Rs. 3699.10</span>
+                  <span class="discount">-20%</span>
+                </div>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="bt1 hrt" id="heart" onclick="heartalert()">
+                  &#9825;
+                </button>
+                <button class="bt1 adc" id="cart "onclick="addToCart('Teck-06 Casual Shoes',3699.10)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div class="product-card c1">
+              <div class="product-image">
+                <img
+                  class="pic1"
+                  src="https://www.goldstarshoes.com/Media/g2204grey-1.jpg"
+                  alt="shoe1"
+                />
+              </div>
+              <div class="product-title">
+                <h4 class="c1">G10 G2204 Goldstar</h4>
+              </div>
+              <div class="product-details">
+                <div class="price-container">
+                  <span>Rs. 2547.00</span>
+                  <span class="discount">-15%</span>
+                </div>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="bt1 hrt" id="heart" onclick="heartalert()">
+                  &#9825;
+                </button>
+                <button class="bt1 adc" id="cart" onclick="addToCart('G10 G2204 Goldstar',2547.00)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div class="product-card c1">
+              <div class="product-image">
+                <img
+                  class="pic1"
+                  src="https://www.goldstarshoes.com/Media/goldstar_shoes_collection.jpg"
+                  alt="shoe1"
+                />
+              </div>
+              <div class="product-title">
+                <h4 class="c1">ACE 3</h4>
+              </div>
+              <div class="product-details">
+                <div class="price-container">
+                  <span>Rs. 2920.00</span>
+                  <span class="discount">-25%</span>
+                </div>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="bt1 hrt" id="heart" onclick="heartalert()">
+                  &#9825;
+                </button>
+                <button class="bt1 adc" id="cart"  onclick="addToCart('ACE 3',2920.00)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="pdtrow">
+            <div class="product-card c1">
+              <div class="product-image">
+                <img
+                  class="pic1"
+                  src="https://www.goldstarshoes.com/Media/grey-1.jpg"
+                  alt="shoe1"
+                />
+              </div>
+              <div class="product-title">
+                <h4 class="c1">Sunlite 04</h4>
+              </div>
+              <div class="product-details">
+                <div class="price-container">
+                  <span>Rs. 1070.00</span>
+                  <span class="discount">-10%</span>
+                </div>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="bt1 hrt" id="heart" onclick="heartalert()">
+                  &#9825;
+                </button>
+                <button class="bt1 adc" id="cart" onclick="addToCart('Sunlite 04',1070.00)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div class="product-card c1">
+              <div class="product-image">
+                <img
+                  class="pic1"
+                  src="https://www.goldstarshoes.com/Media/2_16.png"
+                  alt="shoe1"
+                />
+              </div>
+              <div class="product-title">
+                <h4 class="c1">Low-Top Trainers</h4>
+              </div>
+              <div class="product-details">
+                <div class="price-container">
+                  <span>Rs. 1089.00</span>
+                  <span class="discount">-25%</span>
+                </div>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="bt1 hrt" id="heart" onclick="heartalert()">
+                  &#9825;
+                </button>
+                <button class="bt1 adc" id="cart" onclick="addToCart('Low-Top Trainers',1089.00)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div class="product-card c1">
+              <div class="product-image">
+                <img
+                  class="pic1"
+                  src="https://www.goldstarshoes.com/MediaThumb/original/Media/NEW PRODUCTS/New Folder/9-1.jpg"
+                  alt="shoe1"
+                />
+              </div>
+              <div class="product-title">
+                <h4 class="c1">Rock 06 Goldstar</h4>
+              </div>
+              <div class="product-details">
+                <div class="price-container">
+                  <span>Rs. 3049.00</span>
+                  <span class="discount">-20%</span>
+                </div>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="bt1 hrt" id="heart" onclick="heartalert()">
+                  &#9825;
+                </button>
+                <button class="bt1 adc" id="cart" onclick="addToCart('Rock 06 Goldstar',3049.00)">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--footer section-->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <div class="logo-main">
+            <img src="../images/SOLEHEAVEN.png" alt="logo" />
+          </div>
+          <p class="footer-description">
+            Your one-stop shop for trendy, comfortable, and affordable sneakers.
+            We bring you the best footwear from around the world.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../HTML/home.html">Home</a></li>
+            <li><a href="../HTML/product.html">Products</a></li>
+            <li><a href="../HTML/aboutus.html">About Us</a></li>
+            <li><a href="../HTML/blog.html">Blog</a></li>
+            <li><a href="../HTML/research.html">Research</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <ul class="footer-contact contact-main">
+            <li><i class="fas fa-envelope"></i> support@soleheaven.com</li>
+            <li><i class="fas fa-phone"></i> +977-9834567281</li>
+            <li><i class="fas fa-map-marker-alt"></i> Dulari, Nepal</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Available Brands</h4>
+          <ul class="footer-brands">
+            <li>Goldstar</li>
+            <li>Adidas</li>
+            <li>Nike</li>
+            <li>Puma</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="copyright">&copy; 2025 Sole Heaven. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
